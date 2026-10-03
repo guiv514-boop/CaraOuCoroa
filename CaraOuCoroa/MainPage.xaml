@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaraOuCoroa.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="moeda.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a submarine number ten" />
+
+            <Label
+                Text="Cara ou Coroa"/>
+
+
+
+            <Picker
+                x:Name="picker"
+                Title="Escolha um lado e aperte o botão para sortear a moeda">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>CARA</x:String>
+                        <x:String>COROA</x:String>
+                        
+                        
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button
+            x:Name="JogarMoedaButton"
+            Text="JOGAR A MOEDA"
+            Clicked="JogarMoedaButton_Clicked"/>
+
+            <Label
+            Text=""
+            x:Name="ResultadoLabel"
+            SemanticProperties.HeadingLevel="Level1"
+            SemanticProperties.Description="Resultado cara ou coroa "/>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
